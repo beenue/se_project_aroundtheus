@@ -1,14 +1,105 @@
 <!DOCTYPE html>
-<html lang="eng">
+<html lang="en">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8" />
     <meta name="author" content="Taylor Soffe" />
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <title></title>
+    <meta
+      name="description"
+      content="Homepage for photos taken around the US"
+    />
+    <meta name="keywords" content="Photography, Travel, Landscape" />
+    <title>Around the US</title>
     <link rel="stylesheet" href="./pages/index.css" />
-    <link rel="favicon" href="./favicon.ico.ico" />
+    <link rel="favicon" href="./favicon.ico" />
   </head>
-  <body></body>
+  <body class="page">
+    <header class="header page__header">
+      <img src="./images/Logo.svg" alt="around the US" class="header__logo" />
+    </header>
+    <main class="content">
+      <section class="profile page__profile">
+        <div class="profile__people">
+          <img src="./images/Avatar.png" alt="Avatar" class="profile__photo" />
+
+          <div class="profile__info">
+            <div class="profile__info-accent">
+              <h1 class="profile__name">Jacques Cousteau</h1>
+              <button class="profile__edit-button button"></button>
+            </div>
+
+            <p class="profile__description">Explorer</p>
+          </div>
+        </div>
+        <button class="profile__add-button button"></button>
+      </section>
+      <section class="cards page__cards">
+        <ul class="cards__list">
+          <li class="card cards__card">
+            <img
+              src="./images/yosemite-valley.png"
+              alt="yosemite-valley"
+              class="card__image"
+            />
+            <div class="card__about-image">
+              <p class="card__description">Yosemite Valley</p>
+              <button class="card__button button"></button>
+            </div>
+          </li>
+          <li class="card cards__card">
+            <img
+              src="./images/lake-louise.png"
+              alt="Lake Louise"
+              class="card__image"
+            />
+            <div class="card__about-image">
+              <p class="card__description">Lake Louise</p>
+              <button class="card__button button"></button>
+            </div>
+          </li>
+          <li class="card cards__card">
+            <img
+              src="./images/bald-mountains.png"
+              alt="Bald Mountains"
+              class="card__image"
+            />
+            <div class="card__about-image">
+              <p class="card__description">Bald Mountains</p>
+              <button class="card__button button"></button>
+            </div>
+          </li>
+          <li class="card cards__card">
+            <img src="./images/latemar.png" alt="Latemar" class="card__image" />
+            <div class="card__about-image">
+              <p class="card__description">Latemar</p>
+              <button class="card__button button"></button>
+            </div>
+          </li>
+          <li class="card cards__card">
+            <img
+              src="./images/vanoise-national-park.jpg"
+              alt="Vanoise National Park"
+              class="card__image"
+            />
+            <div class="card__about-image">
+              <p class="card__description">Vanoise National Park</p>
+              <button class="card__button button"></button>
+            </div>
+          </li>
+          <li class="card cards__card">
+            <img
+              src="./images/lago-di-braies.png"
+              alt="Lago di Braies"
+              class="card__image"
+            />
+            <div class="card__about-image">
+              <p class="card__description">Lago di Braies</p>
+              <button class="card__button button"></button>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <fotter class="footer page__footer">&copy; Around The U.S.</fotter>
+  </body>
 </html>
