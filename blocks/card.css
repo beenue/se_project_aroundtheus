@@ -36,6 +36,7 @@
 
 .card__button {
   background-image: url(../images/like-active.svg);
+  background: transparent;
   width: 21px;
   height: 18px;
   border-width: 0;
