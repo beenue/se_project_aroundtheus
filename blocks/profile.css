@@ -107,14 +107,12 @@
     width: 18px;
     height: 18px;
     margin-top: 4px;
-    background-image: url(../images/Edit_vector.svg);
   }
 
   .profile__add-button {
     width: 282px;
     height: 50px;
     margin: 36px auto 0;
-    background-image: url(../images/add-icon.svg);
     border-radius: 2px;
     border: 2px solid #fff;
   }
