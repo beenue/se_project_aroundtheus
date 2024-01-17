@@ -1,4 +1,4 @@
-const initialCards = [];
+const initialCards = [object1, object2, object3, object4, object5, object6];
 const object1 = {
   name ="Yosemite Valley",
   link = "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/yosemite.jpg"
