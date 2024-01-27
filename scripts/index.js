@@ -27,3 +27,23 @@ const object6 = {
   name: "Lago di Braies",
   link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/lago.jpg",
 };
+
+const profileEditButton = document.querySelector("#profile-edit-button");
+const profileEditModal = document.querySelector("#profile-edit-modal");
+const modalCloseButton = document.querySelector("#modal-close-button");
+const profileName = document.querySelector(".profile__name");
+const profileDescription = document.querySelector(".profile__description");
+const profileNameInput = document.querySelector("#profile-name-input");
+const profileDescriptionInput = document.querySelector(
+  "#profile-description-input"
+);
+
+function closePopup() {
+  profileEditModal.classList.remove("modal_opened");
+}
+
+function openPopup() {
+  profileEditModal.classList.add("modal_opened");
+}
+profileEditButton.addEventListener("click", openPopup);
+modalCloseButton.addEventListener("click", closePopup);

@@ -28,13 +28,18 @@
               <button
                 type="button"
                 class="profile__edit-button button"
+                id="profile-edit-button"
               ></button>
             </div>
 
             <p class="profile__description">Explorer</p>
           </div>
         </div>
-        <button type="button" class="profile__add-button button"></button>
+        <button
+          type="button"
+          class="profile__add-button button"
+          id="profile-add-button"
+        ></button>
       </section>
       <section class="cards page__cards">
         <ul class="cards__list">
@@ -46,7 +51,11 @@
             />
             <div class="card__about-image">
               <h2 class="card__title">Yosemite Valley</h2>
-              <button type="button" class="card__button button"></button>
+              <button
+                type="button"
+                class="card__button button"
+                id="card__button"
+              ></button>
             </div>
           </li>
           <li class="card cards__card">
@@ -106,22 +115,22 @@
     <footer class="footer page__footer">
       <p class="footer__copywright">&copy; Around The U.S.</p>
     </footer>
-    <div class="modal" id="profile-edit-modal">
+    <div class="modal modal_opened" id="profile-edit-modal">
       <div class="modal__container">
-        <button class="modal__close" id="profile-close-modal"></button>
+        <button class="modal__close" id="modal-close-button"></button>
         <h3 class="modal__heading">Edit profile</h3>
         <form class="modal__form">
           <input
             type="text"
             class="modal__input"
-            id="profile-title-input"
-            name="title"
+            id="profile-name-input"
+            name="Name"
             placeholder="Name"
           />
           <input
             type="text"
             class="modal__input"
-            id="profile-title-description"
+            id="profile-description-input"
             name="description"
             placeholder="Description"
           />
