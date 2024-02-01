@@ -42,80 +42,13 @@
         ></button>
       </section>
       <section class="cards page__cards">
-        <ul class="cards__list">
-          <li class="card cards__card">
-            <img
-              src="./images/yosemite-valley.png"
-              alt="yosemite-valley"
-              class="card__image"
-            />
-            <div class="card__about-image">
-              <h2 class="card__title">Yosemite Valley</h2>
-              <button
-                type="button"
-                class="card__button button"
-                id="card__button"
-              ></button>
-            </div>
-          </li>
-          <li class="card cards__card">
-            <img
-              src="./images/lake-louise.png"
-              alt="Lake Louise"
-              class="card__image"
-            />
-            <div class="card__about-image">
-              <h2 class="card__title">Lake Louise</h2>
-              <button type="button" class="card__button button"></button>
-            </div>
-          </li>
-          <li class="card cards__card">
-            <img
-              src="./images/bald-mountains.png"
-              alt="Bald Mountains"
-              class="card__image"
-            />
-            <div class="card__about-image">
-              <h2 class="card__title">Bald Mountains</h2>
-              <button type="button" class="card__button button"></button>
-            </div>
-          </li>
-          <li class="card cards__card">
-            <img src="./images/latemar.png" alt="Latemar" class="card__image" />
-            <div class="card__about-image">
-              <h2 class="card__title">Latemar</h2>
-              <button type="button" class="card__button button"></button>
-            </div>
-          </li>
-          <li class="card cards__card">
-            <img
-              src="./images/vanoise-national-park.jpg"
-              alt="Vanoise National Park"
-              class="card__image"
-            />
-            <div class="card__about-image">
-              <h2 class="card__title">Vanoise National Park</h2>
-              <button type="button" class="card__button button"></button>
-            </div>
-          </li>
-          <li class="card cards__card">
-            <img
-              src="./images/lago-di-braies.png"
-              alt="Lago di Braies"
-              class="card__image"
-            />
-            <div class="card__about-image">
-              <h2 class="card__title">Lago di Braies</h2>
-              <button type="button" class="card__button button"></button>
-            </div>
-          </li>
-        </ul>
+        <ul class="cards__list"></ul>
       </section>
     </main>
     <footer class="footer page__footer">
       <p class="footer__copywright">&copy; Around The U.S.</p>
     </footer>
-    <div class="modal modal_opened" id="profile-edit-modal">
+    <div class="modal" id="profile-edit-modal">
       <div class="modal__container">
         <button class="modal__close" id="modal-close-button"></button>
         <h3 class="modal__heading">Edit profile</h3>
@@ -138,6 +71,20 @@
         </form>
       </div>
     </div>
+
+    <template id="card-template">
+      <li class="card cards__card">
+        <img src="" alt="" class="card__image" />
+        <div class="card__about-image">
+          <h2 class="card__title"></h2>
+          <button
+            type="button"
+            class="card__button button"
+            id="card__button"
+          ></button>
+        </div>
+      </li>
+    </template>
     <script src="./scripts/index.js"></script>
   </body>
 </html>
