@@ -29,7 +29,7 @@ const initialCards = [
   },
 ];
 
-/*Elements */
+/*Elements  test*/
 /* Note to code reviewer ~~ is there a shortcut to have these comments become banners to better organize the code? I saw something like that in the video walkthroughs and was curious */
 
 const profileEditButton = document.querySelector("#profile-edit-button");
