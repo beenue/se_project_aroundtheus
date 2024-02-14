@@ -42,14 +42,17 @@ const profileDescriptionInput = document.querySelector(
   "#profile-description-input"
 );
 const profileEditForm = profileEditModal.querySelector(".modal__form");
+
+const cardAddModal = document.querySelector ("#card-add-modal");
+const cardAddForm = cardAddModal.querySelector(".modal__form");
 const cardListEl = document.querySelector(".cards__list");
 const cardTemplate =
   document.querySelector("#card-template").content.firstElementChild;
 const cardAddButton = document.querySelector ("#card-add-button");
-const cardAddModal = document.querySelector ("#card-add-modal");
 const modal = document.querySelector (".modal");
 const cardAddModalCloseButton = cardAddModal.querySelector("#modal-close-button");
-
+const cardTitleInput = cardAddForm.querySelector ("#card-title-input");
+const cardLinkInput = cardAddForm.querySelector ("#card-link-input");
 /* Functions */
 
 
@@ -80,14 +83,21 @@ function handleProfileEditSubmit(e) {
   e.preventDefault();
   profileDescription.textContent = profileDescriptionInput.value;
   profileName.textContent = profileNameInput.value;
-  closePopup();
+  closePopup(profileEditModal);
 }
 
 function handlecCardAddSubmit(e) {
   e.preventDefault();
-
+  const name = cardTitleInput.value;
+  const link = cardLinkInput.value;
+  renderCard({name,link}, cardListEl);
+  closePopup(cardAddModal);
 }
 
+function renderCard (cardData) {
+  const cardElement = getCardElement(cardData);
+  cardListEl.prepend(cardElement);
+}
 /* Event Listeners */
 profileEditButton.addEventListener("click", () => {
   profileNameInput.value = profileName.textContent;
@@ -105,9 +115,8 @@ cardAddModalCloseButton.addEventListener("click", ()=> closePopup(cardAddModal))
 
 profileEditForm.addEventListener("submit", handleProfileEditSubmit);
 
-initialCards.forEach((cardData) => {
-  const cardElement = getCardElement(cardData);
-  cardListEl.prepend(cardElement);
-});
+cardAddForm.addEventListener("submit",handlecCardAddSubmit);
+
+initialCards.forEach((cardData)=> renderCard(cardData, cardListEl));
 
 
