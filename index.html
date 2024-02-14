@@ -37,8 +37,8 @@
         </div>
         <button
           type="button"
-          class="profile__add-button button"
-          id="profile-add-button"
+          class="card__add-button button"
+          id="card-add-button"
         ></button>
       </section>
       <section class="cards page__cards">
@@ -55,19 +55,43 @@
         <form class="modal__form">
           <input
             type="text"
-            class="modal__input"
+            class="modal__input modal__input_name"
             id="profile-name-input"
             name="Name"
             placeholder="Name"
           />
           <input
             type="text"
-            class="modal__input"
+            class="modal__input modal__input-description"
             id="profile-description-input"
             name="description"
             placeholder="Description"
           />
           <button class="modal__button" type="submit">Save</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="modal" id="card-add-modal">
+      <div class="modal__container">
+        <button class="modal__close" id="modal-close-button"></button>
+        <h3 class="modal__heading">New Place</h3>
+        <form class="modal__form">
+          <input
+            type="text"
+            class="modal__input modal__input-title"
+            id="card-title-input"
+            name="Title"
+            placeholder="Title"
+          />
+          <input
+            type="text"
+            class="modal__input modal__input-link"
+            id="card-link-input"
+            name="Add link"
+            placeholder="Add link"
+          />
+          <button class="modal__button" type="submit">Create</button>
         </form>
       </div>
     </div>

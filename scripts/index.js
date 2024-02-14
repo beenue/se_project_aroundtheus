@@ -29,12 +29,12 @@ const initialCards = [
   },
 ];
 
-/*Elements  test*/
+/*Elements  */
 /* Note to code reviewer ~~ is there a shortcut to have these comments become banners to better organize the code? I saw something like that in the video walkthroughs and was curious */
 
 const profileEditButton = document.querySelector("#profile-edit-button");
 const profileEditModal = document.querySelector("#profile-edit-modal");
-const modalCloseButton = document.querySelector("#modal-close-button");
+const profileModalCloseButton = profileEditModal.querySelector("#modal-close-button");
 const profileName = document.querySelector(".profile__name");
 const profileDescription = document.querySelector(".profile__description");
 const profileNameInput = document.querySelector("#profile-name-input");
@@ -45,12 +45,13 @@ const profileEditForm = profileEditModal.querySelector(".modal__form");
 const cardListEl = document.querySelector(".cards__list");
 const cardTemplate =
   document.querySelector("#card-template").content.firstElementChild;
+const cardAddButton = document.querySelector ("#card-add-button");
+const cardAddModal = document.querySelector ("#card-add-modal");
+const modal = document.querySelector (".modal");
+const cardAddModalCloseButton = cardAddModal.querySelector("#modal-close-button");
 
 /* Functions */
 
-function closePopup() {
-  profileEditModal.classList.remove("modal_opened");
-}
 
 function getCardElement(cardData) {
   const cardElement = cardTemplate.cloneNode(true);
@@ -64,11 +65,14 @@ function getCardElement(cardData) {
   return cardElement;
 }
 
-function openPopup() {
-  profileNameInput.value = profileName.textContent;
-  profileDescriptionInput.value = profileDescription.textContent;
-  profileEditModal.classList.add("modal_opened");
+function openPopup(modal) {
+  modal.classList.add("modal_opened");
 }
+
+function closePopup(modal) {
+  modal.classList.remove("modal_opened");
+}
+
 
 /* Event Handlers */
 
@@ -79,10 +83,25 @@ function handleProfileEditSubmit(e) {
   closePopup();
 }
 
-/* Event Listeners */
+function handlecCardAddSubmit(e) {
+  e.preventDefault();
 
-profileEditButton.addEventListener("click", openPopup);
-modalCloseButton.addEventListener("click", closePopup);
+}
+
+/* Event Listeners */
+profileEditButton.addEventListener("click", () => {
+  profileNameInput.value = profileName.textContent;
+  profileDescriptionInput.value = profileDescription.textContent;
+  openPopup (profileEditModal);
+});
+
+profileModalCloseButton.addEventListener("click", ()=> closePopup(profileEditModal));
+
+
+cardAddButton.addEventListener("click", ()=> openPopup(cardAddModal));
+
+cardAddModalCloseButton.addEventListener("click", ()=> closePopup(cardAddModal));
+
 
 profileEditForm.addEventListener("submit", handleProfileEditSubmit);
 
@@ -90,3 +109,5 @@ initialCards.forEach((cardData) => {
   const cardElement = getCardElement(cardData);
   cardListEl.prepend(cardElement);
 });
+
+
