@@ -3,6 +3,7 @@
   border-radius: 10px;
   color: black;
   display: flex;
+  position: relative;
   flex-direction: column;
 }
 
@@ -61,18 +62,16 @@
 }
 
 .card__delete-button {
-  background-color: transparent;
-  background-image: url(../images/Trash.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 21px;
-  height: 18px;
+  background-color: rgba(255, 255, 255, 0);
   border: none;
+  min-width: 18px;
+  min-height: 19.3px;
+  position:absolute;
+  top: 18px;
+  right: 15px;
+  background-image: url(../images/Trash.svg);
   cursor: pointer;
-  padding: 0;
-  margin: 0;
-  position: absolute;
-  transition: 0.13s linear;
+
 }
  
 
