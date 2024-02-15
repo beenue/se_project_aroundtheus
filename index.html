@@ -96,15 +96,27 @@
       </div>
     </div>
 
+    <div class="modal cardImage__modal" id="imageModal">
+      <div class="modal__cardImage_container">
+        <img src="" alt="" class="cardImage__modal-image" />
+        <button
+          class="modal__close cardImage__imageModalButton"
+          type="button"
+        ></button>
+        <p class="card__imageModal-text"></p>
+      </div>
+    </div>
+
     <template id="card-template">
       <li class="card cards__card">
         <img src="" alt="" class="card__image" />
+        <button class="card__delete-button" type="button"></button>
         <div class="card__about-image">
           <h2 class="card__title"></h2>
           <button
             type="button"
             class="card__button button"
-            id="card__button"
+            id="card__like_button"
           ></button>
         </div>
       </li>
