@@ -70,25 +70,21 @@
   border: none;
   min-width: 18px;
   min-height: 19.3px;
-  position:absolute;
+  position: absolute;
   top: 18px;
   right: 15px;
   background-image: url(../images/Trash.svg);
   cursor: pointer;
-
 }
- 
 
 .card__delete-button:hover {
   opacity: 0.5;
 }
 
-
 @media screen and (max-width: 770px) {
-.card__add-button {
-  width: 282px;
-  height: 50px;
-  margin: 36px auto 0;
+  .card__add-button {
+    width: 282px;
+    height: 50px;
+    margin: 36px auto 0;
+  }
 }
-}
-
