@@ -167,6 +167,27 @@ previewImageClose.addEventListener("click", () =>
   closePopup(previewImageModal)
 );
 
+//escape key close
+function handleEscape(evt) {
+  if (evt.key === "Escape") {
+    const modalOpened = document.querySelectorAll(".modal_opened");
+    closePopup(modalOpened);
+  }
+}
+
+//overlay close
+const modals = document.querySelectorAll(".modal");
+modals.forEach((modal) => {
+  modal.addEventListener("mousedown", (evt) => {
+    if (evt.target.classList.contains("modal_opened")) {
+      closePopup(modal);
+    }
+    if (evt.target.classList.contains("modal__close")) {
+      closePopup(modal);
+    }
+  });
+});
+
 profileEditForm.addEventListener("submit", handleProfileEditSubmit);
 
 cardAddForm.addEventListener("submit", handlecCardAddSubmit);
