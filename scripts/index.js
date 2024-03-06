@@ -107,10 +107,12 @@ function getCardElement(cardData) {
 
 function openPopup(modal) {
   modal.classList.add("modal_opened");
+  document.addEventListener ('keydown', handleEscape);
 }
 
 function closePopup(modal) {
   modal.classList.remove("modal_opened");
+  document.removeEventListener ('keydown', handleEscape);
 }
 
 function renderCard(cardData) {
@@ -170,7 +172,7 @@ previewImageClose.addEventListener("click", () =>
 //escape key close
 function handleEscape(evt) {
   if (evt.key === "Escape") {
-    const modalOpened = document.querySelectorAll(".modal_opened");
+    const modalOpened = document.querySelector(".modal_opened");
     closePopup(modalOpened);
   }
 }
