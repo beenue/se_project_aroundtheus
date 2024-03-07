@@ -104,6 +104,11 @@
   line-height: normal;
 }
 
+.modal__input_type_error {
+  border-bottom: #ff0000;
+}
+
+
 /*.modal__input:last-of-type {
   margin-bottom: 0;
 }
@@ -182,9 +187,7 @@
   min-height: 30px;
 }
 
-.modal__input_type_error {
-  border-bottom: #ff0000;
-}
+
 
 .modal__button:disabled {
   border: 2px solid rgba(0, 0, 0, 0.2);
