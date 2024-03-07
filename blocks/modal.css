@@ -182,6 +182,10 @@
   min-height: 30px;
 }
 
+.modal__input_type_error {
+  border-bottom: #ff0000;
+}
+
 .modal__button:disabled {
   border: 2px solid rgba(0, 0, 0, 0.2);
   color: #000000;

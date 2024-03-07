@@ -32,9 +32,12 @@ function checkInputValidity (formEls, inputEls, options) {
   })
 } 
 */
+function areInputsValid(inputEls) {
+    return inputEls.every(inputEl => inputEl.validity.valid)
+}
 
 function toggleButtonState(inputEls, submitButton, options) {
-    const isValid = inputEls.every(inputEl => inputEl.validity.valid);
+    const isValid = areInputsValid(inputEls);
     if (isValid) {
         submitButton.removeAttribute('disabled');
         submitButton.classList.remove(options.inactiveButtonClass);
