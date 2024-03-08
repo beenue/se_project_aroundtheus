@@ -105,11 +105,8 @@
 }
 
 .modal__input_type_error {
-  border-bottom: #ff0000;
+  border-bottom: 1px, solid, #ff0000;
 }
-
-/* Is there anything else I need to include with this? I am unsure what is still needed? */
-
 
 
 .modal__preview-image {
